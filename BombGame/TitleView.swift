@@ -31,8 +31,8 @@ class TitleView: UIView {
     func setupViewTitleLabel(){
         titleLabel?.backgroundColor = UIColor.clearColor()
         titleLabel?.textAlignment = NSTextAlignment.Center
-        titleLabel?.font = UIFont.systemFontOfSize(16)
-        titleLabel?.frame = CGRectMake(GAP + TitleViewHeigh, GAP, ScreenWIdht - GAP * 2 - TitleViewHeigh * 2 , TitleViewHeigh)
+        titleLabel?.font = UIFont.systemFontOfSize(20)
+        titleLabel?.frame = CGRectMake(GAP + TitleViewHeigh, 20, ScreenWIdht - GAP * 2 - TitleViewHeigh * 2 , TitleViewHeigh)
         self.addSubview(titleLabel!)
     }
     
@@ -44,11 +44,10 @@ class TitleView: UIView {
     
     //左侧按钮。
     func setupLeftButton(){
-        leftButton?.frame = CGRectMake(GAP, GAP, TitleViewHeigh, TitleViewHeigh)
+        leftButton?.frame = CGRectMake(GAP, 20, TitleViewHeigh, TitleViewHeigh)
         leftButton?.backgroundColor = UIColor.clearColor()
         leftButton?.setImage(UIImage(named: "ic_return_nor.png"), forState: UIControlState.Normal)
-//        leftButton?.setImage(UIImage(named: "ic_return_nor.png"), forState: UIControlState.Highlighted)
-//        leftButton?.setImage(UIImage(named: "ic_return_nor.png"), forState: UIControlState.Selected)
+        leftButton?.showsTouchWhenHighlighted = true
         leftButton?.addTarget(self, action: "leftButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         self.addSubview(leftButton!)
     }
@@ -60,9 +59,10 @@ class TitleView: UIView {
     //右侧按钮。
     func setupRightButton(){
         var rightButton : UIButton = UIButton()
-        rightButton.frame = CGRectMake(ScreenWIdht - GAP - TitleViewHeigh, GAP, TitleViewHeigh, TitleViewHeigh)
+        rightButton.frame = CGRectMake(ScreenWIdht - GAP - TitleViewHeigh, 20, TitleViewHeigh, TitleViewHeigh)
         rightButton.backgroundColor = UIColor.clearColor()
         rightButton.addTarget(self, action: "rightButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        rightButton.showsTouchWhenHighlighted = true
         self.addSubview(rightButton)
     }
     

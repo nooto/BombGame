@@ -8,6 +8,8 @@
 
 import UIKit
 
+let backColor : UIColor =   UIColor(red: 22/255, green: 203/255, blue: 152/255, alpha: 1.0)
+let viewBGColor : UIColor = UIColor(red: 237/250, green:241/255 , blue: 248/55, alpha: 1)
 class BaseViewController: UIViewController , TitleViewlProtocol{
     var showNav :Bool = true
     var titleView :TitleView?
@@ -17,6 +19,7 @@ class BaseViewController: UIViewController , TitleViewlProtocol{
         super.viewDidLoad()
         
         setupTitleView()
+        self.view.backgroundColor = viewBGColor
     }
     
     //标题栏
@@ -24,6 +27,7 @@ class BaseViewController: UIViewController , TitleViewlProtocol{
         self.titleView = TitleView()
         self.titleView?.initTitleView(CGRectMake(0, 0, ScreenWIdht, TitleViewHeighMax))
         titleView?.backgroundColor = UIColor.grayColor()
+        titleView?.backgroundColor = backColor
         titleView?.titleProtocol = self
         self.view.addSubview(titleView!)
     }

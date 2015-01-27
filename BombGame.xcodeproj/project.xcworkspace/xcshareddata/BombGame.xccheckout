@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B010575C-EA4E-405D-8572-B19F8EA74FA5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BombGame</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9793F60D45FEB72FE98AC2E9FB6D91724256BE75</key>
+		<string>github.com:nooto/BombGame.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BombGame.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9793F60D45FEB72FE98AC2E9FB6D91724256BE75</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:nooto/BombGame.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9793F60D45FEB72FE98AC2E9FB6D91724256BE75</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9793F60D45FEB72FE98AC2E9FB6D91724256BE75</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BombGame</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -56,7 +56,6 @@ class BombViewController: BaseViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
         
         self.audioSession .setCategory(AVAudioSessionCategoryPlayback, error: nil)
         
@@ -65,9 +64,7 @@ class BombViewController: BaseViewController {
         setupImageView()
         initSuspendButton()
         initEndButton()
-        
         playBombBgMusic()
-        
         self.isCounting = true
     }
 
@@ -75,11 +72,9 @@ class BombViewController: BaseViewController {
     
     func setupImageView(){
         bombImage = UIImageView()
-        bombImage?.backgroundColor = UIColor.redColor()
         bombImage!.image = UIImage(named: "ic_about_logo")
         bombImage?.frame = CGRectMake(ScreenWIdht/2 - 150, 120, 200, 200)
         bombImage?.center = CGPointMake(ScreenWIdht/2, ScreenHight/2 - 60)
-//        imageView?.center = CGPointMake(ScreenWIdht/2 - 100, 300)
         self.view.addSubview(bombImage!)
     }
     
@@ -87,25 +82,33 @@ class BombViewController: BaseViewController {
     func initSuspendButton(){
         var suspendBtn : UIButton = UIButton()
         suspendBtn.layer.cornerRadius = 4.0
-        suspendBtn.frame = CGRectMake(ScreenWIdht/2 - 200, ScreenHight - 100, 150, 50)
+        suspendBtn.frame = CGRectMake(ScreenWIdht/2 - 200, ScreenHight - 60, 150, 40)
         suspendBtn.center = CGPointMake(ScreenWIdht/4 , suspendBtn.center.y)
         suspendBtn.setTitle("暂停", forState: UIControlState.Normal)
-        suspendBtn.backgroundColor = UIColor.redColor()
+        suspendBtn.backgroundColor = backColor
+        suspendBtn.showsTouchWhenHighlighted = true
         suspendBtn.addTarget(self, action: "SuspendButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(suspendBtn)
     }
     
     func SuspendButtonAction(sender :UIButton){
         self.isCounting = !self.isCounting
+        if isCounting {
+            sender.backgroundColor = backColor
+        }
+        else{
+            sender.backgroundColor = UIColor.grayColor()
+        }
     }
     
     func initEndButton(){
         var endButton : UIButton = UIButton()
         endButton.layer.cornerRadius = 4.0
-        endButton.frame = CGRectMake(ScreenWIdht/2 , ScreenHight - 100, 150, 50)
+        endButton.frame = CGRectMake(ScreenWIdht/2 , ScreenHight - 60, 150, 40)
         endButton.center = CGPointMake(ScreenWIdht/4 * 3, endButton.center.y)
         endButton.setTitle("结束游戏", forState: UIControlState.Normal)
-        endButton.backgroundColor = UIColor.redColor()
+        endButton.backgroundColor = backColor
+        endButton.showsTouchWhenHighlighted = true
         endButton.addTarget(self, action: "EndButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(endButton)
     }

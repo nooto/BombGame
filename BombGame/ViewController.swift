@@ -14,6 +14,9 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
     var orderSecondTime : NSTimeInterval? = 60
     var timePickView : UIPickerView?
     var descriptionLabel : UILabel?
+    
+    var showAnimat : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +29,9 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
         setupTimePoroscee()
         
         setupDescription()
+        setupHowToPlayLabel()
         setupStartButton()
+        self.view.backgroundColor = UIColor(red: 237/250, green:241/255 , blue: 248/55, alpha: 1)
         self.navigationController!.navigationBar.hidden = true
     }
     
@@ -34,7 +39,7 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
         var labeleWidht:CGFloat = 200
         var titleLabel:UILabel? = UILabel()
         titleLabel!.frame = CGRectMake(ScreenWIdht/2 - labeleWidht/2, 40, labeleWidht, 30)
-        titleLabel!.text = "请选择爆炸时间"
+        titleLabel!.text = "设置炸弹爆炸时间"
         titleLabel!.textAlignment = NSTextAlignment.Center
         titleLabel!.font = UIFont.systemFontOfSize(20)
         self.view.addSubview(titleLabel!)
@@ -42,14 +47,14 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
 
     func setupTimePoroscee(){
         timePickView = UIPickerView()
-        timePickView!.frame = CGRectMake(20, 100, ScreenWIdht - 40, 200)
+        timePickView!.frame = CGRectMake(20, 80, ScreenWIdht - 40, 200)
         timePickView!.delegate = self;
         timePickView!.dataSource = self
         timePickView!.selectRow(1, inComponent: 0, animated: true)
         timePickView!.selectRow(0, inComponent: 1, animated: false)
 //        timePickView!.backgroundColor = UIColor.grayColor()
-        timePickView!.layer.borderColor = UIColor.grayColor().CGColor
-        timePickView!.layer.borderWidth = 0.5
+        timePickView!.layer.borderColor = backColor.CGColor
+        timePickView!.layer.borderWidth = 1
         timePickView!.layer.cornerRadius = 20
         self.view.addSubview(timePickView!)
         
@@ -79,19 +84,41 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
         descriptionLabel = UILabel()
         descriptionLabel?.text = "炸弹将于1分钟后爆炸"
         descriptionLabel?.font = UIFont.systemFontOfSize(20)
-        descriptionLabel!.frame = CGRectMake(0, CGRectGetMaxY(timePickView!.frame) + 30, ScreenWIdht, 40)
+        descriptionLabel!.frame = CGRectMake(0, CGRectGetMaxY(timePickView!.frame) + 10, ScreenWIdht, 40)
         descriptionLabel?.textAlignment = NSTextAlignment.Center
-//        descriptionLabel?.backgroundColor = UIColor.grayColor()
+        descriptionLabel?.textColor = UIColor.redColor()
         self.view.addSubview(descriptionLabel!)
+    }
+    
+    func startAnimate(){
+//        var scale : CGFloat = 1.0
+//        if self.showAnimat {
+//            scale = 0.8
+//        }
+//        else{
+//            scale = 1.2
+//        }
+//        UIView.animateWithDuration(0.5, animations: {
+//        })
+    }
+    
+    func setupHowToPlayLabel(){
+      var   tempLalbel = UILabel()
+        tempLalbel.text = "唱K，聚餐，聚会时，几个朋友一起来bomb一下吧！\n个人先定好时间，不要让其他人知道呦.然后点击开始游戏并提一个问题，再传给下一个朋友，下一个朋友回答完再提一个问题，然后再传给下一个朋哟，依次这样下去，炸弹最终在谁的手中响了，谁就输了。这时候就可以开始惩罚他了，唱歌，跳舞，说笑话，真心话大冒险种种都可以招呼他了，惩罚完由上一局输的朋友设定新的时间继续开始。。。。"
+        tempLalbel.font = UIFont.systemFontOfSize(10)
+        tempLalbel.numberOfLines = 20
+        tempLalbel.frame = CGRectMake(20, CGRectGetMaxY(self.descriptionLabel!.frame)-10, ScreenWIdht-40, 100)
+        tempLalbel.textAlignment = NSTextAlignment.Left
+        self.view.addSubview(tempLalbel)
     }
     
     func setupStartButton(){
         var startButton : UIButton? = UIButton()
-        startButton!.frame = CGRectMake(ScreenWIdht/2-60, CGRectGetMaxY(descriptionLabel!.frame) + 30, 120, 40)
+        startButton!.frame = CGRectMake(20, ScreenHight - 60, ScreenWIdht - 40, 40)
         startButton!.setTitle("开始游戏", forState: UIControlState.Normal)
         startButton!.setTitle("开始游戏", forState: UIControlState.Highlighted)
         startButton!.setTitleColor(UIColor.grayColor(), forState: UIControlState.Highlighted)
-        startButton!.backgroundColor = UIColor.redColor()
+        startButton!.backgroundColor = backColor
         startButton!.layer.cornerRadius = 4.0
         startButton!.addTarget(self, action:"buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(startButton!)
@@ -118,6 +145,8 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
         }
         
         descriptionLabel?.text = descrptin
+        self.showAnimat = !self.showAnimat
+        self .startAnimate()
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
