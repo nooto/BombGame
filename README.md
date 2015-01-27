@@ -1,0 +1,2 @@
+# BombGame
+self simple game
