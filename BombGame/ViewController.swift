@@ -31,7 +31,6 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
         setupDescription()
         setupHowToPlayLabel()
         setupStartButton()
-        self.view.backgroundColor = UIColor(red: 237/250, green:241/255 , blue: 248/55, alpha: 1)
         self.navigationController!.navigationBar.hidden = true
     }
     
@@ -77,7 +76,6 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
         secondLabel.textAlignment = NSTextAlignment.Left
         secondLabel.backgroundColor = UIColor.clearColor()
         self.view.addSubview(secondLabel)
-        
     }
     
     func setupDescription(){

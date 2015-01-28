@@ -23,6 +23,20 @@
 		3E6679051A776EA00057DB4E /* ic_return_nor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6678FC1A776EA00057DB4E /* ic_return_nor.png */; };
 		3E6679061A776EA00057DB4E /* ic_return_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6678FD1A776EA00057DB4E /* ic_return_sel.png */; };
 		3E6679081A78B79E0057DB4E /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6679071A78B79E0057DB4E /* default.png */; };
+		3E6679151A78DCAB0057DB4E /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E66790F1A78DCAB0057DB4E /* CustomButton.m */; };
+		3E6679161A78DCAB0057DB4E /* EmitterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6679111A78DCAB0057DB4E /* EmitterView.m */; };
+		3E6679171A78DCAB0057DB4E /* snow1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6679121A78DCAB0057DB4E /* snow1.png */; };
+		3E6679181A78DCAB0057DB4E /* star1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6679131A78DCAB0057DB4E /* star1.png */; };
+		3E6679191A78DCAB0057DB4E /* stars2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6679141A78DCAB0057DB4E /* stars2.png */; };
+		3E6679271A78ED380057DB4E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6679201A78ED380057DB4E /* 1.png */; };
+		3E6679281A78ED380057DB4E /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6679211A78ED380057DB4E /* 2.png */; };
+		3E6679291A78ED380057DB4E /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6679221A78ED380057DB4E /* 3.png */; };
+		3E66792A1A78ED380057DB4E /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6679231A78ED380057DB4E /* 4.png */; };
+		3E66792B1A78ED380057DB4E /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6679241A78ED380057DB4E /* 5.png */; };
+		3E66792C1A78ED380057DB4E /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6679251A78ED380057DB4E /* 6.png */; };
+		3E66792D1A78ED380057DB4E /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6679261A78ED380057DB4E /* 7.png */; };
+		3E6679301A78EE070057DB4E /* BombImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E66792F1A78EE070057DB4E /* BombImage.m */; };
+		3E6679321A78EFF90057DB4E /* endBomb.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6679311A78EFF90057DB4E /* endBomb.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +70,24 @@
 		3E6678FC1A776EA00057DB4E /* ic_return_nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_return_nor.png; sourceTree = "<group>"; };
 		3E6678FD1A776EA00057DB4E /* ic_return_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_return_sel.png; sourceTree = "<group>"; };
 		3E6679071A78B79E0057DB4E /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		3E6679091A78D8B80057DB4E /* BombGame-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BombGame-Bridging-Header.h"; sourceTree = "<group>"; };
+		3E66790E1A78DCAB0057DB4E /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		3E66790F1A78DCAB0057DB4E /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		3E6679101A78DCAB0057DB4E /* EmitterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterView.h; sourceTree = "<group>"; };
+		3E6679111A78DCAB0057DB4E /* EmitterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterView.m; sourceTree = "<group>"; };
+		3E6679121A78DCAB0057DB4E /* snow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow1.png; sourceTree = "<group>"; };
+		3E6679131A78DCAB0057DB4E /* star1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star1.png; sourceTree = "<group>"; };
+		3E6679141A78DCAB0057DB4E /* stars2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stars2.png; sourceTree = "<group>"; };
+		3E6679201A78ED380057DB4E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		3E6679211A78ED380057DB4E /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		3E6679221A78ED380057DB4E /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		3E6679231A78ED380057DB4E /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		3E6679241A78ED380057DB4E /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		3E6679251A78ED380057DB4E /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		3E6679261A78ED380057DB4E /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		3E66792E1A78EE070057DB4E /* BombImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BombImage.h; path = ../../BombImage.h; sourceTree = "<group>"; };
+		3E66792F1A78EE070057DB4E /* BombImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BombImage.m; path = ../../BombImage.m; sourceTree = "<group>"; };
+		3E6679311A78EFF90057DB4E /* endBomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = endBomb.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +129,7 @@
 		3E6678D11A776E700057DB4E /* BombGame */ = {
 			isa = PBXGroup;
 			children = (
+				3E66790D1A78DCAB0057DB4E /* Obj-c */,
 				3E6678F41A776EA00057DB4E /* BaseViewController.swift */,
 				3E6678F51A776EA00057DB4E /* BombViewController.swift */,
 				3E6678F61A776EA00057DB4E /* CSwiftConst.swift */,
@@ -108,6 +141,7 @@
 				3E6678DB1A776E700057DB4E /* Images.xcassets */,
 				3E6678DD1A776E700057DB4E /* LaunchScreen.xib */,
 				3E6678D21A776E700057DB4E /* Supporting Files */,
+				3E6679091A78D8B80057DB4E /* BombGame-Bridging-Header.h */,
 			);
 			path = BombGame;
 			sourceTree = "<group>";
@@ -148,6 +182,30 @@
 				3E6678FD1A776EA00057DB4E /* ic_return_sel.png */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		3E66790D1A78DCAB0057DB4E /* Obj-c */ = {
+			isa = PBXGroup;
+			children = (
+				3E66792E1A78EE070057DB4E /* BombImage.h */,
+				3E66792F1A78EE070057DB4E /* BombImage.m */,
+				3E66790E1A78DCAB0057DB4E /* CustomButton.h */,
+				3E66790F1A78DCAB0057DB4E /* CustomButton.m */,
+				3E6679101A78DCAB0057DB4E /* EmitterView.h */,
+				3E6679111A78DCAB0057DB4E /* EmitterView.m */,
+				3E6679121A78DCAB0057DB4E /* snow1.png */,
+				3E6679131A78DCAB0057DB4E /* star1.png */,
+				3E6679141A78DCAB0057DB4E /* stars2.png */,
+				3E6679201A78ED380057DB4E /* 1.png */,
+				3E6679211A78ED380057DB4E /* 2.png */,
+				3E6679221A78ED380057DB4E /* 3.png */,
+				3E6679231A78ED380057DB4E /* 4.png */,
+				3E6679241A78ED380057DB4E /* 5.png */,
+				3E6679251A78ED380057DB4E /* 6.png */,
+				3E6679261A78ED380057DB4E /* 7.png */,
+				3E6679311A78EFF90057DB4E /* endBomb.png */,
+			);
+			path = "Obj-c";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,15 +288,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E6679291A78ED380057DB4E /* 3.png in Resources */,
 				3E6679031A776EA00057DB4E /* bomb_end.mp3 in Resources */,
 				3E6678DA1A776E700057DB4E /* Main.storyboard in Resources */,
+				3E6679281A78ED380057DB4E /* 2.png in Resources */,
 				3E6679061A776EA00057DB4E /* ic_return_sel.png in Resources */,
+				3E66792B1A78ED380057DB4E /* 5.png in Resources */,
 				3E6678DF1A776E700057DB4E /* LaunchScreen.xib in Resources */,
+				3E6679181A78DCAB0057DB4E /* star1.png in Resources */,
+				3E6679271A78ED380057DB4E /* 1.png in Resources */,
 				3E6679041A776EA00057DB4E /* ic_about_logo@2x.png in Resources */,
 				3E6679051A776EA00057DB4E /* ic_return_nor.png in Resources */,
+				3E6679171A78DCAB0057DB4E /* snow1.png in Resources */,
+				3E66792C1A78ED380057DB4E /* 6.png in Resources */,
+				3E6679321A78EFF90057DB4E /* endBomb.png in Resources */,
+				3E6679191A78DCAB0057DB4E /* stars2.png in Resources */,
+				3E66792A1A78ED380057DB4E /* 4.png in Resources */,
 				3E6679021A776EA00057DB4E /* bomb.aif in Resources */,
 				3E6678DC1A776E700057DB4E /* Images.xcassets in Resources */,
 				3E6679081A78B79E0057DB4E /* default.png in Resources */,
+				3E66792D1A78ED380057DB4E /* 7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +327,11 @@
 			files = (
 				3E6678D71A776E700057DB4E /* ViewController.swift in Sources */,
 				3E6678D51A776E700057DB4E /* AppDelegate.swift in Sources */,
+				3E6679301A78EE070057DB4E /* BombImage.m in Sources */,
 				3E6678FF1A776EA00057DB4E /* BombViewController.swift in Sources */,
+				3E6679151A78DCAB0057DB4E /* CustomButton.m in Sources */,
 				3E6679001A776EA00057DB4E /* CSwiftConst.swift in Sources */,
+				3E6679161A78DCAB0057DB4E /* EmitterView.m in Sources */,
 				3E6678FE1A776EA00057DB4E /* BaseViewController.swift in Sources */,
 				3E6679011A776EA00057DB4E /* TitleView.swift in Sources */,
 			);
@@ -340,6 +412,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "击鼓传花";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -375,6 +448,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:击鼓传花)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -384,9 +458,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BombGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BombGame/BombGame-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -394,9 +471,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BombGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BombGame/BombGame-Bridging-Header.h";
 			};
 			name = Release;
 		};

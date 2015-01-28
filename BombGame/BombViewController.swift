@@ -19,7 +19,8 @@ class BombViewController: BaseViewController {
     var timer : NSTimer?
     var orderSecond : NSTimeInterval? = 60
     var curSecond : NSTimeInterval = 0
-    var bombImage:UILabel?
+    var bombImage: BombImage?
+    var endButton : UIButton?
     var isCounting: Bool = false {
         willSet(newValue) {
             if newValue {
@@ -42,14 +43,17 @@ class BombViewController: BaseViewController {
         self.curSecond += 1
         if curSecond >= orderSecond {
             self.isCounting = false
+            UIView.animateWithDuration(0.5, animations:{
+                self.endButton!.frame = CGRectMake(10, CGRectGetMinY(self.endButton!.frame), ScreenWIdht - 20, CGRectGetHeight(self.endButton!.frame))
+            })
+//            self.endButton?.frame = CGRectMake(10, CGRectGetMinY(self.endButton!.frame), ScreenWIdht - 20, CGRectGetHeight(self.endButton!.frame))
+            self.bombImage?.showEndIamge()
+//            self.end
             playBombMusic()
-//            self.navigationController!.popViewControllerAnimated(true)
         }
         else{
             playBombBgMusic()
         }
-        
-        self.bombImage!.text = "\(self.curSecond)"
     }
     
     
@@ -58,7 +62,7 @@ class BombViewController: BaseViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = UIColor.whiteColor()
         self.audioSession .setCategory(AVAudioSessionCategoryPlayback, error: nil)
         
         setTitleViewTitle("游戏开始")
@@ -70,13 +74,12 @@ class BombViewController: BaseViewController {
         self.isCounting = true
     }
 
-    
-    
     func setupImageView(){
-        bombImage = UILabel()
-//        bombImage!.image = UIImage(named: "ic_about_logo")
-        bombImage?.frame = CGRectMake(ScreenWIdht/2 - 150, 120, 200, 200)
+        bombImage = BombImage()
+        bombImage?.frame = CGRectMake(ScreenWIdht/2 - 150, 130, 200, 200)
         bombImage?.center = CGPointMake(ScreenWIdht/2, ScreenHight/2 - 60)
+        bombImage?.layer.cornerRadius = 100;
+        bombImage?.showImage()
         self.view.addSubview(bombImage!)
     }
     
@@ -97,29 +100,31 @@ class BombViewController: BaseViewController {
         self.isCounting = !self.isCounting
         if isCounting {
             sender.backgroundColor = backColor
+            self.bombImage!.showImage()
+//            self.bombImage!.showAnimation(true)
         }
         else{
+            self.bombImage!.showSuspendImge()
             sender.backgroundColor = UIColor.grayColor()
         }
     }
     
     func initEndButton(){
-        var endButton : UIButton = UIButton()
-        endButton.layer.cornerRadius = 4.0
-        endButton.frame = CGRectMake(ScreenWIdht/2 , ScreenHight - 60, 150, 40)
-        endButton.center = CGPointMake(ScreenWIdht/4 * 3, endButton.center.y)
-        endButton.setTitle("结束游戏", forState: UIControlState.Normal)
-        endButton.backgroundColor = backColor
-        endButton.showsTouchWhenHighlighted = true
-        endButton.addTarget(self, action: "EndButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(endButton)
+        endButton = UIButton()
+        endButton!.layer.cornerRadius = 4.0
+        endButton!.frame = CGRectMake(ScreenWIdht/2 , ScreenHight - 60, 150, 40)
+        endButton!.center = CGPointMake(ScreenWIdht/4 * 3, endButton!.center.y)
+        endButton!.setTitle("结束游戏", forState: UIControlState.Normal)
+        endButton!.backgroundColor = backColor
+        endButton!.showsTouchWhenHighlighted = true
+        endButton!.addTarget(self, action: "EndButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(endButton!)
     }
     
     func EndButtonAction(sender :UIButton){
         self.isCounting = false
         self.navigationController?.popViewControllerAnimated(true)
     }
-    
     
     //MARK: - 播放音频。。
     func playBombBgMusic(){
