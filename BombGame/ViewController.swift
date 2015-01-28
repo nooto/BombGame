@@ -38,7 +38,7 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
     func setupTitleLabel(){
         var labeleWidht:CGFloat = 200
         var titleLabel:UILabel? = UILabel()
-        titleLabel!.frame = CGRectMake(ScreenWIdht/2 - labeleWidht/2, 40, labeleWidht, 30)
+        titleLabel!.frame = CGRectMake(ScreenWIdht/2 - labeleWidht/2, 30, labeleWidht, 30)
         titleLabel!.text = "设置炸弹爆炸时间"
         titleLabel!.textAlignment = NSTextAlignment.Center
         titleLabel!.font = UIFont.systemFontOfSize(20)
@@ -91,15 +91,11 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     
     func startAnimate(){
-//        var scale : CGFloat = 1.0
-//        if self.showAnimat {
-//            scale = 0.8
-//        }
-//        else{
-//            scale = 1.2
-//        }
-//        UIView.animateWithDuration(0.5, animations: {
-//        })
+        var k : CAKeyframeAnimation? = CAKeyframeAnimation(keyPath: "transform.scale")
+        k!.values = [0.9, 1.0, 1.1]
+        k!.keyTimes = [0.0, 0.3, 0.6, 1.0]
+        k!.calculationMode = kCAAnimationLinear
+        self.descriptionLabel!.layer.addAnimation(k, forKey: "SHOW")
     }
     
     func setupHowToPlayLabel(){

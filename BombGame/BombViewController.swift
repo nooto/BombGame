@@ -19,8 +19,7 @@ class BombViewController: BaseViewController {
     var timer : NSTimer?
     var orderSecond : NSTimeInterval? = 60
     var curSecond : NSTimeInterval = 0
-    var bombImage:UIImageView?
-    
+    var bombImage:UILabel?
     var isCounting: Bool = false {
         willSet(newValue) {
             if newValue {
@@ -44,10 +43,13 @@ class BombViewController: BaseViewController {
         if curSecond >= orderSecond {
             self.isCounting = false
             playBombMusic()
+//            self.navigationController!.popViewControllerAnimated(true)
         }
         else{
             playBombBgMusic()
         }
+        
+        self.bombImage!.text = "\(self.curSecond)"
     }
     
     
@@ -71,8 +73,8 @@ class BombViewController: BaseViewController {
     
     
     func setupImageView(){
-        bombImage = UIImageView()
-        bombImage!.image = UIImage(named: "ic_about_logo")
+        bombImage = UILabel()
+//        bombImage!.image = UIImage(named: "ic_about_logo")
         bombImage?.frame = CGRectMake(ScreenWIdht/2 - 150, 120, 200, 200)
         bombImage?.center = CGPointMake(ScreenWIdht/2, ScreenHight/2 - 60)
         self.view.addSubview(bombImage!)

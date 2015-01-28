@@ -22,6 +22,7 @@
 		3E6679041A776EA00057DB4E /* ic_about_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6678FB1A776EA00057DB4E /* ic_about_logo@2x.png */; };
 		3E6679051A776EA00057DB4E /* ic_return_nor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6678FC1A776EA00057DB4E /* ic_return_nor.png */; };
 		3E6679061A776EA00057DB4E /* ic_return_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6678FD1A776EA00057DB4E /* ic_return_sel.png */; };
+		3E6679081A78B79E0057DB4E /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6679071A78B79E0057DB4E /* default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		3E6678FB1A776EA00057DB4E /* ic_about_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_about_logo@2x.png"; sourceTree = "<group>"; };
 		3E6678FC1A776EA00057DB4E /* ic_return_nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_return_nor.png; sourceTree = "<group>"; };
 		3E6678FD1A776EA00057DB4E /* ic_return_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_return_sel.png; sourceTree = "<group>"; };
+		3E6679071A78B79E0057DB4E /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			children = (
 				3E6678F91A776EA00057DB4E /* bomb.aif */,
 				3E6678FA1A776EA00057DB4E /* bomb_end.mp3 */,
+				3E6679071A78B79E0057DB4E /* default.png */,
 				3E6678FB1A776EA00057DB4E /* ic_about_logo@2x.png */,
 				3E6678FC1A776EA00057DB4E /* ic_return_nor.png */,
 				3E6678FD1A776EA00057DB4E /* ic_return_sel.png */,
@@ -235,6 +238,7 @@
 				3E6679051A776EA00057DB4E /* ic_return_nor.png in Resources */,
 				3E6679021A776EA00057DB4E /* bomb.aif in Resources */,
 				3E6678DC1A776E700057DB4E /* Images.xcassets in Resources */,
+				3E6679081A78B79E0057DB4E /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +453,7 @@
 				3E6678F01A776E700057DB4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E6678F11A776E700057DB4E /* Build configuration list for PBXNativeTarget "BombGameTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +462,7 @@
 				3E6678F31A776E700057DB4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
