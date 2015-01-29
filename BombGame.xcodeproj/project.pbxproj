@@ -37,6 +37,7 @@
 		3E66792D1A78ED380057DB4E /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6679261A78ED380057DB4E /* 7.png */; };
 		3E6679301A78EE070057DB4E /* BombImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E66792F1A78EE070057DB4E /* BombImage.m */; };
 		3E6679321A78EFF90057DB4E /* endBomb.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6679311A78EFF90057DB4E /* endBomb.png */; };
+		3E6679341A7A00C60057DB4E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6679331A7A00C60057DB4E /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		3E66792E1A78EE070057DB4E /* BombImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BombImage.h; path = ../../BombImage.h; sourceTree = "<group>"; };
 		3E66792F1A78EE070057DB4E /* BombImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BombImage.m; path = ../../BombImage.m; sourceTree = "<group>"; };
 		3E6679311A78EFF90057DB4E /* endBomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = endBomb.png; sourceTree = "<group>"; };
+		3E6679331A7A00C60057DB4E /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				3E66790D1A78DCAB0057DB4E /* Obj-c */,
 				3E6678F41A776EA00057DB4E /* BaseViewController.swift */,
 				3E6678F51A776EA00057DB4E /* BombViewController.swift */,
+				3E6679331A7A00C60057DB4E /* LocationManager.swift */,
 				3E6678F61A776EA00057DB4E /* CSwiftConst.swift */,
 				3E6678F71A776EA00057DB4E /* TitleView.swift */,
 				3E6678F81A776EA00057DB4E /* Resource */,
@@ -257,6 +260,7 @@
 				TargetAttributes = {
 					3E6678CE1A776E700057DB4E = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = PAZX553D3X;
 					};
 					3E6678E31A776E700057DB4E = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -327,6 +331,7 @@
 			files = (
 				3E6678D71A776E700057DB4E /* ViewController.swift in Sources */,
 				3E6678D51A776E700057DB4E /* AppDelegate.swift in Sources */,
+				3E6679341A7A00C60057DB4E /* LocationManager.swift in Sources */,
 				3E6679301A78EE070057DB4E /* BombImage.m in Sources */,
 				3E6678FF1A776EA00057DB4E /* BombViewController.swift in Sources */,
 				3E6679151A78DCAB0057DB4E /* CustomButton.m in Sources */,
@@ -459,6 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BombGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -472,6 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BombGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

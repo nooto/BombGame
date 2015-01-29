@@ -66,11 +66,14 @@ class BombViewController: BaseViewController {
         self.audioSession .setCategory(AVAudioSessionCategoryPlayback, error: nil)
         
         setTitleViewTitle("游戏开始")
-        adjustTitleViewStatue(false, titleLabelHiddeer: false, rightBtnHidde: true)
+        adjustTitleViewStatue(true, titleLabelHiddeer: false, rightBtnHidde: true)
         setupImageView()
         initSuspendButton()
         initEndButton()
         playBombBgMusic()
+
+        locationManagerObj.addLocationNotify(orderSecond!)
+        
         self.isCounting = true
     }
 

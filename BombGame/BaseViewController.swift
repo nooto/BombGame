@@ -47,6 +47,10 @@ class BaseViewController: UIViewController , TitleViewlProtocol{
     }
     
     func adjustTitleViewStatue(leftBtnHidde : Bool, titleLabelHiddeer:Bool, rightBtnHidde: Bool){
+        self.titleView?.leftButton?.hidden = leftBtnHidde
+        self.titleView?.titleLabel?.hidden = titleLabelHiddeer
+        self.titleView?.rightButton?.hidden = rightBtnHidde
+        
     }
 
     func setTitleViewTitle(title : NSString){
