@@ -22,22 +22,42 @@ class LocationManager: NSObject {
 
     
     func addLocationNotify(timeGap : NSTimeInterval){
+        var firedate : NSDate = NSDate()
+        firedate =  NSDate().dateByAddingTimeInterval(timeGap)
+
+        
         var arrNotify : [UILocalNotification]
+        var count = 0;
+        
         for  notifyObj  in  UIApplication.sharedApplication().scheduledLocalNotifications {
             if notifyObj is UILocalNotification{
-                
+                if notifyObj.fireDate?.isEqualToDate(firedate) == true{
+                    return
+                }
             }
         }
         
-        var firedate : NSDate = NSDate()
-        firedate =  NSDate().dateByAddingTimeInterval(timeGap)
         var addNotify : UILocalNotification = UILocalNotification()
         addNotify.fireDate =  firedate
-//        addNotify.repeatInterval = 0
         addNotify.soundName = "bomb_end.mp3"
         addNotify.timeZone = NSTimeZone()
         addNotify.alertBody = "炸了。炸了。炸了。炸了。炸了。"
         UIApplication.sharedApplication().scheduleLocalNotification(addNotify)
+    }
+    
+    func cancelLocation(timeGap : NSTimeInterval){
+//        var firedate : NSDate = NSDate()
+//        firedate =  NSDate().dateByAddingTimeInterval(timeGap)
+//        var arrNotify : [UILocalNotification]
+//        for  notifyObj  in  UIApplication.sharedApplication().scheduledLocalNotifications {
+//            if notifyObj is UILocalNotification{
+//                if notifyObj.fireDate?.isEqualToDate(firedate) == true{
+//                    //                    var destLoc:UILocalNotification = UILocalNotification(coder: notifyObj)
+//                    UIApplication.sharedApplication().cancelLocalNotification(notifyObj as UILocalNotification)
+//                    return
+//                }
+//            }
+//        }
         
     }
 }

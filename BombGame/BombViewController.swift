@@ -126,6 +126,7 @@ class BombViewController: BaseViewController {
     
     func EndButtonAction(sender :UIButton){
         self.isCounting = false
+        locationManagerObj.cancelLocation(orderSecond!)
         self.navigationController?.popViewControllerAnimated(true)
     }
     
