@@ -17,7 +17,8 @@ class BombViewController: BaseViewController {
     var audioSession : AVAudioSession = AVAudioSession.sharedInstance()
     
     var timer : NSTimer?
-    var orderSecond : NSTimeInterval? = 60
+    var orderSecond : NSTimeInterval = 60
+    var orderLocation : NSDate = NSDate()
     var curSecond : NSTimeInterval = 0
     var bombImage: BombImage?
     var endButton : UIButton?
@@ -71,8 +72,9 @@ class BombViewController: BaseViewController {
         initSuspendButton()
         initEndButton()
         playBombBgMusic()
-
-        locationManagerObj.addLocationNotify(orderSecond!)
+        
+        orderLocation = NSDate()
+        locationManagerObj.addLocationNotify(orderSecond)
         
         self.isCounting = true
     }
@@ -126,7 +128,9 @@ class BombViewController: BaseViewController {
     
     func EndButtonAction(sender :UIButton){
         self.isCounting = false
-        locationManagerObj.cancelLocation(orderSecond!)
+//        locationManagerObj.cancelLocation(orderSecond)
+        locationManagerObj.cancelLocation(orderSecond, startDate: orderLocation)
+        
         self.navigationController?.popViewControllerAnimated(true)
     }
     

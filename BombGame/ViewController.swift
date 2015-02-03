@@ -120,7 +120,7 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
     
     func buttonAction(sender: UIButton){
         var bombView : BombViewController? = BombViewController()
-        bombView?.orderSecond = orderSecondTime
+        bombView?.orderSecond = orderSecondTime!
         self.navigationController?.pushViewController(bombView!, animated: true)
     }
     

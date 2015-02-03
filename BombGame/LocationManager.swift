@@ -20,23 +20,9 @@ class LocationManager: NSObject {
         return locationManagerObj
     }
 
-    
     func addLocationNotify(timeGap : NSTimeInterval){
         var firedate : NSDate = NSDate()
         firedate =  NSDate().dateByAddingTimeInterval(timeGap)
-
-        
-        var arrNotify : [UILocalNotification]
-        var count = 0;
-        
-        for  notifyObj  in  UIApplication.sharedApplication().scheduledLocalNotifications {
-            if notifyObj is UILocalNotification{
-                if notifyObj.fireDate?.isEqualToDate(firedate) == true{
-                    return
-                }
-            }
-        }
-        
         var addNotify : UILocalNotification = UILocalNotification()
         addNotify.fireDate =  firedate
         addNotify.soundName = "bomb_end.mp3"
@@ -45,19 +31,18 @@ class LocationManager: NSObject {
         UIApplication.sharedApplication().scheduleLocalNotification(addNotify)
     }
     
-    func cancelLocation(timeGap : NSTimeInterval){
-//        var firedate : NSDate = NSDate()
-//        firedate =  NSDate().dateByAddingTimeInterval(timeGap)
-//        var arrNotify : [UILocalNotification]
-//        for  notifyObj  in  UIApplication.sharedApplication().scheduledLocalNotifications {
-//            if notifyObj is UILocalNotification{
-//                if notifyObj.fireDate?.isEqualToDate(firedate) == true{
-//                    //                    var destLoc:UILocalNotification = UILocalNotification(coder: notifyObj)
-//                    UIApplication.sharedApplication().cancelLocalNotification(notifyObj as UILocalNotification)
-//                    return
-//                }
-//            }
-//        }
+    func cancelLocation(timeGap : NSTimeInterval ,startDate : NSDate){
+        var firedate : NSDate =  startDate.dateByAddingTimeInterval(timeGap)
+        var arrNotify : [UILocalNotification]
+        for  notifyObj  in  UIApplication.sharedApplication().scheduledLocalNotifications {
+            if notifyObj is UILocalNotification{
+                if notifyObj.fireDate?.isEqualToDate(firedate) == true{
+                    //                    var destLoc:UILocalNotification = UILocalNotification(coder: notifyObj)
+                    UIApplication.sharedApplication().cancelLocalNotification(notifyObj as UILocalNotification)
+                    return
+                }
+            }
+        }
         
     }
 }
