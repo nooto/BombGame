@@ -20,7 +20,7 @@ class BaseViewController: UIViewController , TitleViewlProtocol{
         
         setupTitleView()
 //        self.view.backgroundColor = viewBGColor
-        self.view.backgroundColor = UIColor.whiteColor()
+//        self.view.backgroundColor = UIColor.whiteColor()
     }
     
     //标题栏

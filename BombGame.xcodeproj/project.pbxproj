@@ -38,6 +38,16 @@
 		3E6679301A78EE070057DB4E /* BombImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E66792F1A78EE070057DB4E /* BombImage.m */; };
 		3E6679321A78EFF90057DB4E /* endBomb.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6679311A78EFF90057DB4E /* endBomb.png */; };
 		3E6679341A7A00C60057DB4E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6679331A7A00C60057DB4E /* LocationManager.swift */; };
+		3EA2735D1A8B2E2200270F74 /* randomlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2735C1A8B2E2200270F74 /* randomlyView.swift */; };
+		3ED6F2281A8C91900012D840 /* slider-default_trackBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED6F2201A8C91900012D840 /* slider-default_trackBackground@2x.png */; };
+		3ED6F2291A8C91900012D840 /* slider-default-handle-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED6F2211A8C91900012D840 /* slider-default-handle-highlighted.png */; };
+		3ED6F22A1A8C91900012D840 /* slider-default-handle-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED6F2221A8C91900012D840 /* slider-default-handle-highlighted@2x.png */; };
+		3ED6F22B1A8C91900012D840 /* slider-default-handle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED6F2231A8C91900012D840 /* slider-default-handle.png */; };
+		3ED6F22C1A8C91900012D840 /* slider-default-handle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED6F2241A8C91900012D840 /* slider-default-handle@2x.png */; };
+		3ED6F22D1A8C91900012D840 /* slider-default-track.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED6F2251A8C91900012D840 /* slider-default-track.png */; };
+		3ED6F22E1A8C91900012D840 /* slider-default-track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED6F2261A8C91900012D840 /* slider-default-track@2x.png */; };
+		3ED6F22F1A8C91900012D840 /* slider-default-trackBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED6F2271A8C91900012D840 /* slider-default-trackBackground.png */; };
+		3ED6F2331A8CAC920012D840 /* RangeSliderThumbLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6F2321A8CAC920012D840 /* RangeSliderThumbLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +100,16 @@
 		3E66792F1A78EE070057DB4E /* BombImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BombImage.m; path = ../../BombImage.m; sourceTree = "<group>"; };
 		3E6679311A78EFF90057DB4E /* endBomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = endBomb.png; sourceTree = "<group>"; };
 		3E6679331A7A00C60057DB4E /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		3EA2735C1A8B2E2200270F74 /* randomlyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = randomlyView.swift; sourceTree = "<group>"; };
+		3ED6F2201A8C91900012D840 /* slider-default_trackBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-default_trackBackground@2x.png"; sourceTree = "<group>"; };
+		3ED6F2211A8C91900012D840 /* slider-default-handle-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-default-handle-highlighted.png"; sourceTree = "<group>"; };
+		3ED6F2221A8C91900012D840 /* slider-default-handle-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-default-handle-highlighted@2x.png"; sourceTree = "<group>"; };
+		3ED6F2231A8C91900012D840 /* slider-default-handle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-default-handle.png"; sourceTree = "<group>"; };
+		3ED6F2241A8C91900012D840 /* slider-default-handle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-default-handle@2x.png"; sourceTree = "<group>"; };
+		3ED6F2251A8C91900012D840 /* slider-default-track.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-default-track.png"; sourceTree = "<group>"; };
+		3ED6F2261A8C91900012D840 /* slider-default-track@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-default-track@2x.png"; sourceTree = "<group>"; };
+		3ED6F2271A8C91900012D840 /* slider-default-trackBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-default-trackBackground.png"; sourceTree = "<group>"; };
+		3ED6F2321A8CAC920012D840 /* RangeSliderThumbLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderThumbLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +156,8 @@
 				3E6678F51A776EA00057DB4E /* BombViewController.swift */,
 				3E6679331A7A00C60057DB4E /* LocationManager.swift */,
 				3E6678F61A776EA00057DB4E /* CSwiftConst.swift */,
+				3EA2735C1A8B2E2200270F74 /* randomlyView.swift */,
+				3ED6F2321A8CAC920012D840 /* RangeSliderThumbLayer.swift */,
 				3E6678F71A776EA00057DB4E /* TitleView.swift */,
 				3E6678F81A776EA00057DB4E /* Resource */,
 				3E6678D41A776E700057DB4E /* AppDelegate.swift */,
@@ -178,6 +200,14 @@
 			isa = PBXGroup;
 			children = (
 				3E6678F91A776EA00057DB4E /* bomb.aif */,
+				3ED6F2201A8C91900012D840 /* slider-default_trackBackground@2x.png */,
+				3ED6F2211A8C91900012D840 /* slider-default-handle-highlighted.png */,
+				3ED6F2221A8C91900012D840 /* slider-default-handle-highlighted@2x.png */,
+				3ED6F2231A8C91900012D840 /* slider-default-handle.png */,
+				3ED6F2241A8C91900012D840 /* slider-default-handle@2x.png */,
+				3ED6F2251A8C91900012D840 /* slider-default-track.png */,
+				3ED6F2261A8C91900012D840 /* slider-default-track@2x.png */,
+				3ED6F2271A8C91900012D840 /* slider-default-trackBackground.png */,
 				3E6678FA1A776EA00057DB4E /* bomb_end.mp3 */,
 				3E6679071A78B79E0057DB4E /* default.png */,
 				3E6678FB1A776EA00057DB4E /* ic_about_logo@2x.png */,
@@ -292,19 +322,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED6F22F1A8C91900012D840 /* slider-default-trackBackground.png in Resources */,
 				3E6679291A78ED380057DB4E /* 3.png in Resources */,
 				3E6679031A776EA00057DB4E /* bomb_end.mp3 in Resources */,
+				3ED6F22B1A8C91900012D840 /* slider-default-handle.png in Resources */,
 				3E6678DA1A776E700057DB4E /* Main.storyboard in Resources */,
 				3E6679281A78ED380057DB4E /* 2.png in Resources */,
 				3E6679061A776EA00057DB4E /* ic_return_sel.png in Resources */,
+				3ED6F22E1A8C91900012D840 /* slider-default-track@2x.png in Resources */,
 				3E66792B1A78ED380057DB4E /* 5.png in Resources */,
 				3E6678DF1A776E700057DB4E /* LaunchScreen.xib in Resources */,
 				3E6679181A78DCAB0057DB4E /* star1.png in Resources */,
 				3E6679271A78ED380057DB4E /* 1.png in Resources */,
 				3E6679041A776EA00057DB4E /* ic_about_logo@2x.png in Resources */,
 				3E6679051A776EA00057DB4E /* ic_return_nor.png in Resources */,
+				3ED6F22C1A8C91900012D840 /* slider-default-handle@2x.png in Resources */,
+				3ED6F2281A8C91900012D840 /* slider-default_trackBackground@2x.png in Resources */,
+				3ED6F22A1A8C91900012D840 /* slider-default-handle-highlighted@2x.png in Resources */,
 				3E6679171A78DCAB0057DB4E /* snow1.png in Resources */,
+				3ED6F22D1A8C91900012D840 /* slider-default-track.png in Resources */,
 				3E66792C1A78ED380057DB4E /* 6.png in Resources */,
+				3ED6F2291A8C91900012D840 /* slider-default-handle-highlighted.png in Resources */,
 				3E6679321A78EFF90057DB4E /* endBomb.png in Resources */,
 				3E6679191A78DCAB0057DB4E /* stars2.png in Resources */,
 				3E66792A1A78ED380057DB4E /* 4.png in Resources */,
@@ -329,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EA2735D1A8B2E2200270F74 /* randomlyView.swift in Sources */,
 				3E6678D71A776E700057DB4E /* ViewController.swift in Sources */,
 				3E6678D51A776E700057DB4E /* AppDelegate.swift in Sources */,
 				3E6679341A7A00C60057DB4E /* LocationManager.swift in Sources */,
@@ -339,6 +378,7 @@
 				3E6679161A78DCAB0057DB4E /* EmitterView.m in Sources */,
 				3E6678FE1A776EA00057DB4E /* BaseViewController.swift in Sources */,
 				3E6679011A776EA00057DB4E /* TitleView.swift in Sources */,
+				3ED6F2331A8CAC920012D840 /* RangeSliderThumbLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +457,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "击鼓传花";
+				PRODUCT_MODULE_NAME = "定时炸弹";
+				PRODUCT_NAME = "定时炸弹";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -453,7 +494,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:击鼓传花)";
+				PRODUCT_MODULE_NAME = "定时炸弹";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -464,12 +505,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ang gao (PAZX553D3X)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ang gao (PAZX553D3X)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BombGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a830fb7f-e75e-4592-ad9a-0a8cc3df5769";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BombGame/BombGame-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -480,12 +521,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ang gao (PAZX553D3X)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ang gao (PAZX553D3X)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BombGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a830fb7f-e75e-4592-ad9a-0a8cc3df5769";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BombGame/BombGame-Bridging-Header.h";
 			};
 			name = Release;

@@ -14,44 +14,70 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
     var orderSecondTime : NSTimeInterval? = 60
     var timePickView : UIPickerView?
     var descriptionLabel : UILabel?
-    
+    var timeButton : UISegmentedControl?
     var showAnimat : Bool = false
-    
+    var randomView : RangeSlider?
+    var  posY : CGFloat = 0.0;
     override func viewDidLoad() {
         super.viewDidLoad()
         
         var timeLeabel:UILabel?
         var startButton:UIButton?
         
-        self.setupTitleLabel()
-//        self.adjustTitleViewStatue, titleLabelHiddeer: <#Bool#>, rightBtnHidde: <#Bool#>
-        self.hiddeTitleView(true)
-        setupTimePoroscee()
-        
-        setupDescription()
-        setupHowToPlayLabel()
-        setupStartButton()
+        self.posY = 20.0;
+//        self.hiddeTitleView(false)
         self.navigationController!.navigationBar.hidden = true
+        adjustTitleViewStatue(true, titleLabelHiddeer: false, rightBtnHidde: true)
+        setTitleViewTitle("设置炸弹爆炸时间")
+        
+        if self.titleView!.hidden == false {
+            posY += self.titleView!.frame.size.height;
+        }
+        
+        setupModleLabel()
+
+        
+        //时间选择。
+        setupTimePoroscee()
+        setupRandomlView()
+        
+        //时间提示
+        setupDescription()
+        
+        //游戏提示。
+        setupHowToPlayLabel()
+        
+        //开始按钮。
+        setupStartButton()
+        
     }
     
-    func setupTitleLabel(){
+    func setupModleLabel(){
         var labeleWidht:CGFloat = 200
-        var titleLabel:UILabel? = UILabel()
-        titleLabel!.frame = CGRectMake(ScreenWIdht/2 - labeleWidht/2, 30, labeleWidht, 30)
-        titleLabel!.text = "设置炸弹爆炸时间"
-        titleLabel!.textAlignment = NSTextAlignment.Center
-        titleLabel!.font = UIFont.systemFontOfSize(20)
-        self.view.addSubview(titleLabel!)
+        timeButton = UISegmentedControl(items: ["定时","随机"])
+        timeButton!.frame = CGRectMake(ScreenWIdht/2 - labeleWidht/2, posY , labeleWidht, 40)
+        timeButton?.backgroundColor = UIColor.clearColor()
+        self.view.addSubview(timeButton!)
+        timeButton!.addTarget(self, action:"segmentAction", forControlEvents: UIControlEvents.ValueChanged)
+        timeButton?.selectedSegmentIndex = 0
+        posY += timeButton!.frame.size.height + 10
+    }
+    
+    func segmentAction(){
+        self.view.viewWithTag(100000)?.hidden = !( timeButton?.selectedSegmentIndex == 0)
+        self.view.viewWithTag(100001)?.hidden = !( timeButton?.selectedSegmentIndex == 0)
+        timePickView?.hidden = !( timeButton?.selectedSegmentIndex == 0)
+        
+        randomView?.hidden = timeButton?.selectedSegmentIndex == 0
     }
 
     func setupTimePoroscee(){
         timePickView = UIPickerView()
-        timePickView!.frame = CGRectMake(20, 80, ScreenWIdht - 40, 200)
+        timePickView!.frame = CGRectMake(20, posY, ScreenWIdht - 40, 200)
         timePickView!.delegate = self;
         timePickView!.dataSource = self
         timePickView!.selectRow(1, inComponent: 0, animated: true)
         timePickView!.selectRow(0, inComponent: 1, animated: false)
-//        timePickView!.backgroundColor = UIColor.grayColor()
         timePickView!.layer.borderColor = backColor.CGColor
         timePickView!.layer.borderWidth = 1
         timePickView!.layer.cornerRadius = 20
@@ -60,6 +86,7 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
         
         var minuteLabel : UILabel = UILabel()
         minuteLabel.text = "分"
+        minuteLabel.tag = 100000
         minuteLabel.font = UIFont.systemFontOfSize(20)
         minuteLabel.frame = CGRectMake(ScreenWIdht/2, self.timePickView!.frame.size.height / 2 , 40, 30)
         minuteLabel.textAlignment = NSTextAlignment.Center
@@ -70,6 +97,7 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
         
         var secondLabel : UILabel = UILabel()
         secondLabel.text = "秒"
+        secondLabel.tag = 100001
         secondLabel.font = UIFont.systemFontOfSize(20)
         secondLabel.frame = CGRectMake(ScreenWIdht/2, 100, 40, 30)
         secondLabel.center = CGPointMake(ScreenWIdht/2  + 100, self.timePickView!.center.y)
@@ -77,6 +105,18 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
         secondLabel.backgroundColor = UIColor.clearColor()
         self.view.addSubview(secondLabel)
     }
+    
+    func setupRandomlView(){
+        randomView = RangeSlider(frame: (CGRectMake(20, 100, ScreenWIdht - 40, 80)))
+//        randomView?.frame = (CGRectMake(20, 100, ScreenWIdht - 40, 80))
+        randomView?.center = CGPointMake(ScreenWIdht/2, timePickView!.center.y)
+        randomView?.backgroundColor = UIColor.redColor()
+        randomView?.addTarget(self, action: "rangeSliderValueChanged:", forControlEvents: .ValueChanged)
+//        rangeSlider.addTarget(self, action: "rangeSliderValueChanged:", forControlEvents: .ValueChanged)
+        self.view.addSubview(randomView!)
+        self.randomView?.hidden = true
+    }
+    
     
     func setupDescription(){
         descriptionLabel = UILabel()
@@ -192,7 +232,13 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
         updataOrderSecondTime(minutRow, second: secondRow)
         
     }
-
+    
+    func rangeSliderValueChanged(rangeslider: RangeSlider){
+        println("\(rangeslider.lowerValue) \(rangeslider.upperValue)")
+//         println("Range slider value changed: (\(rangeSlider.lowerValue) \(rangeSlider.upperValue))")
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
