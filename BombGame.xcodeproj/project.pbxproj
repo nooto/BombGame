@@ -48,6 +48,7 @@
 		3ED6F22E1A8C91900012D840 /* slider-default-track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED6F2261A8C91900012D840 /* slider-default-track@2x.png */; };
 		3ED6F22F1A8C91900012D840 /* slider-default-trackBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED6F2271A8C91900012D840 /* slider-default-trackBackground.png */; };
 		3ED6F2331A8CAC920012D840 /* RangeSliderThumbLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6F2321A8CAC920012D840 /* RangeSliderThumbLayer.swift */; };
+		3ED6F2351A8DB2360012D840 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6F2341A8DB2360012D840 /* RangeSliderTrackLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		3ED6F2261A8C91900012D840 /* slider-default-track@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-default-track@2x.png"; sourceTree = "<group>"; };
 		3ED6F2271A8C91900012D840 /* slider-default-trackBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-default-trackBackground.png"; sourceTree = "<group>"; };
 		3ED6F2321A8CAC920012D840 /* RangeSliderThumbLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderThumbLayer.swift; sourceTree = "<group>"; };
+		3ED6F2341A8DB2360012D840 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				3E6679331A7A00C60057DB4E /* LocationManager.swift */,
 				3E6678F61A776EA00057DB4E /* CSwiftConst.swift */,
 				3EA2735C1A8B2E2200270F74 /* randomlyView.swift */,
+				3ED6F2341A8DB2360012D840 /* RangeSliderTrackLayer.swift */,
 				3ED6F2321A8CAC920012D840 /* RangeSliderThumbLayer.swift */,
 				3E6678F71A776EA00057DB4E /* TitleView.swift */,
 				3E6678F81A776EA00057DB4E /* Resource */,
@@ -371,6 +374,7 @@
 				3E6678D71A776E700057DB4E /* ViewController.swift in Sources */,
 				3E6678D51A776E700057DB4E /* AppDelegate.swift in Sources */,
 				3E6679341A7A00C60057DB4E /* LocationManager.swift in Sources */,
+				3ED6F2351A8DB2360012D840 /* RangeSliderTrackLayer.swift in Sources */,
 				3E6679301A78EE070057DB4E /* BombImage.m in Sources */,
 				3E6678FF1A776EA00057DB4E /* BombViewController.swift in Sources */,
 				3E6679151A78DCAB0057DB4E /* CustomButton.m in Sources */,

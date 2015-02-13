@@ -10,33 +10,79 @@ import UIKit
 import QuartzCore
 
 class RangeSlider: UIControl {
+    var mininumValue : Double = 60.0{
+        didSet{
+            updateLayerFrames()
+        }
+    }
     
-    var mininumValue = 60.0
-    var maxnumValue =  300.0
-    var lowerValue =  60.0
-    var upperValue =  300.0
+    var maxnumValue : Double =  300.0{
+        didSet{
+            updateLayerFrames()
+        }
+    }
+    
+    var lowerValue : Double =  60.0{
+        didSet{
+            updateLayerFrames()
+        }
+    }
+    
+    var upperValue : Double =  300.0{
+        didSet{
+            updateLayerFrames()
+        }
+    }
     
     var previousLocation = CGPoint()
     
-    var trackLayer = CALayer()
+    let trackLayer = RangeSliderTrackLayer()
     var lowerThumbLayer = RangeSliderThumbLayer()
     var upperThumbLayer = RangeSliderThumbLayer()
     
+    var trackTintColor : UIColor = UIColor(white:0.9, alpha:1.0){
+        didSet{
+            trackLayer.setNeedsDisplay()
+        }
+    }
+    
+    var trackHighlightTintColor : UIColor = UIColor(red: 0.0, green: 0.45, blue: 0.94, alpha: 1.0) {
+        didSet{
+            trackLayer.setNeedsDisplay()
+        }
+    }
+    
+    var thumbTintColor : UIColor = UIColor.whiteColor(){
+        didSet{
+            lowerThumbLayer.setNeedsDisplay()
+            upperThumbLayer.setNeedsDisplay()
+        }
+    }
+    
+    var curvaceousness : CGFloat = 10.0{
+        didSet{
+            trackLayer.setNeedsDisplay()
+            lowerThumbLayer.setNeedsDisplay()
+            upperThumbLayer.setNeedsDisplay()
+        }
+    }
+    
     var thumbWidth: CGFloat{
         return CGFloat(bounds.height)
-    }    
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        trackLayer.backgroundColor = UIColor.blueColor().CGColor
+        trackLayer.contentsScale = UIScreen.mainScreen().scale
+        trackLayer.rangSlider = self
         layer.addSublayer(trackLayer)
         
-        lowerThumbLayer.backgroundColor = UIColor.greenColor().CGColor
         lowerThumbLayer.rangeSlider = self;
+        lowerThumbLayer.contentsScale = UIScreen.mainScreen().scale
         layer.addSublayer(lowerThumbLayer)
         
-        upperThumbLayer.backgroundColor = UIColor.blackColor().CGColor
         upperThumbLayer.rangeSlider = self;
+        upperThumbLayer.contentsScale = UIScreen.mainScreen().scale
         layer.addSublayer(upperThumbLayer)
         
         updateLayerFrames()
@@ -47,6 +93,9 @@ class RangeSlider: UIControl {
     }
     
     func updateLayerFrames() {
+        CATransaction.begin()
+        CATransaction.setDisableActions(true)
+        
         trackLayer.frame = bounds.rectByInsetting(dx: 0.0, dy: bounds.height / 3)
         trackLayer.setNeedsDisplay()
         
@@ -58,6 +107,8 @@ class RangeSlider: UIControl {
         let upperThumbCenter = CGFloat(positionForValue(upperValue))
         upperThumbLayer.frame = CGRect(x: upperThumbCenter - thumbWidth / 2.0, y: 0.0, width: thumbWidth, height: thumbWidth)
         upperThumbLayer.setNeedsDisplay()
+        
+        CATransaction.commit()
     }
     
     func positionForValue(value: Double) -> Double {
@@ -82,9 +133,11 @@ class RangeSlider: UIControl {
         
         if lowerThumbLayer.frame.contains(previousLocation){
             lowerThumbLayer.highlighted = true
+            layer.insertSublayer(lowerThumbLayer, above: upperThumbLayer)
         }
         else if upperThumbLayer.frame.contains(previousLocation) {
             upperThumbLayer.highlighted = true
+            layer.insertSublayer(upperThumbLayer, above: lowerThumbLayer)
         }
         
         return lowerThumbLayer.highlighted || upperThumbLayer.highlighted
@@ -110,11 +163,11 @@ class RangeSlider: UIControl {
             upperValue = boundValue(upperValue, toLowerValue: lowerValue, puuerVlaue: maxnumValue)
         }
         
-        //update ui
-        CATransaction.begin()
-        CATransaction.setDisableActions(true)
-        updateLayerFrames()
-        CATransaction.commit()
+//        //update ui
+//        CATransaction.begin()
+//        CATransaction.setDisableActions(true)
+//        updateLayerFrames()
+//        CATransaction.commit()
         
         sendActionsForControlEvents(.ValueChanged)
         return true
