@@ -5,7 +5,13 @@
 //  Created by GaoAng on 15/1/14.
 //  Copyright (c) 2015年 SH. All rights reserved.
 //
-
+/*
+V1.2.0  
+   1:增加随机时间游戏模式。
+   2：增加通知栏中快速开始随机模式游戏。
+   3：修复已知bug，内存性能优化
+   4：游戏界面优化，风格更加简洁，运行更加流畅。。。。
+*/
 import UIKit
 
 @UIApplicationMain
