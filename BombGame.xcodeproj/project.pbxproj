@@ -49,6 +49,10 @@
 		3ED6F22F1A8C91900012D840 /* slider-default-trackBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED6F2271A8C91900012D840 /* slider-default-trackBackground.png */; };
 		3ED6F2331A8CAC920012D840 /* RangeSliderThumbLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6F2321A8CAC920012D840 /* RangeSliderThumbLayer.swift */; };
 		3ED6F2351A8DB2360012D840 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6F2341A8DB2360012D840 /* RangeSliderTrackLayer.swift */; };
+		3EF87B731A9F1A3E008A7452 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF87B721A9F1A3E008A7452 /* NotificationCenter.framework */; };
+		3EF87B781A9F1A3E008A7452 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF87B771A9F1A3E008A7452 /* TodayViewController.swift */; };
+		3EF87B7A1A9F1A3E008A7452 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EF87B791A9F1A3E008A7452 /* MainInterface.storyboard */; };
+		3EF87B7D1A9F1A3E008A7452 /* BombWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3EF87B701A9F1A3E008A7452 /* BombWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +63,28 @@
 			remoteGlobalIDString = 3E6678CE1A776E700057DB4E;
 			remoteInfo = BombGame;
 		};
+		3EF87B7B1A9F1A3E008A7452 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E6678C71A776E6F0057DB4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EF87B6F1A9F1A3E008A7452;
+			remoteInfo = BombWidget;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3EF87B811A9F1A3F008A7452 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3EF87B7D1A9F1A3E008A7452 /* BombWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3E6678CF1A776E700057DB4E /* BombGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BombGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +137,11 @@
 		3ED6F2271A8C91900012D840 /* slider-default-trackBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-default-trackBackground.png"; sourceTree = "<group>"; };
 		3ED6F2321A8CAC920012D840 /* RangeSliderThumbLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderThumbLayer.swift; sourceTree = "<group>"; };
 		3ED6F2341A8DB2360012D840 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
+		3EF87B701A9F1A3E008A7452 /* BombWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BombWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EF87B721A9F1A3E008A7452 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		3EF87B761A9F1A3E008A7452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EF87B771A9F1A3E008A7452 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		3EF87B791A9F1A3E008A7452 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +159,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3EF87B6D1A9F1A3E008A7452 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EF87B731A9F1A3E008A7452 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -137,6 +175,8 @@
 			children = (
 				3E6678D11A776E700057DB4E /* BombGame */,
 				3E6678E71A776E700057DB4E /* BombGameTests */,
+				3EF87B741A9F1A3E008A7452 /* BombWidget */,
+				3EF87B711A9F1A3E008A7452 /* Frameworks */,
 				3E6678D01A776E700057DB4E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,6 +186,7 @@
 			children = (
 				3E6678CF1A776E700057DB4E /* BombGame.app */,
 				3E6678E41A776E700057DB4E /* BombGameTests.xctest */,
+				3EF87B701A9F1A3E008A7452 /* BombWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,6 +285,32 @@
 			path = "Obj-c";
 			sourceTree = "<group>";
 		};
+		3EF87B711A9F1A3E008A7452 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EF87B721A9F1A3E008A7452 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3EF87B741A9F1A3E008A7452 /* BombWidget */ = {
+			isa = PBXGroup;
+			children = (
+				3EF87B771A9F1A3E008A7452 /* TodayViewController.swift */,
+				3EF87B791A9F1A3E008A7452 /* MainInterface.storyboard */,
+				3EF87B751A9F1A3E008A7452 /* Supporting Files */,
+			);
+			path = BombWidget;
+			sourceTree = "<group>";
+		};
+		3EF87B751A9F1A3E008A7452 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EF87B761A9F1A3E008A7452 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,10 +321,12 @@
 				3E6678CB1A776E700057DB4E /* Sources */,
 				3E6678CC1A776E700057DB4E /* Frameworks */,
 				3E6678CD1A776E700057DB4E /* Resources */,
+				3EF87B811A9F1A3F008A7452 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3EF87B7C1A9F1A3E008A7452 /* PBXTargetDependency */,
 			);
 			name = BombGame;
 			productName = BombGame;
@@ -282,6 +351,23 @@
 			productReference = 3E6678E41A776E700057DB4E /* BombGameTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		3EF87B6F1A9F1A3E008A7452 /* BombWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EF87B801A9F1A3F008A7452 /* Build configuration list for PBXNativeTarget "BombWidget" */;
+			buildPhases = (
+				3EF87B6C1A9F1A3E008A7452 /* Sources */,
+				3EF87B6D1A9F1A3E008A7452 /* Frameworks */,
+				3EF87B6E1A9F1A3E008A7452 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BombWidget;
+			productName = BombWidget;
+			productReference = 3EF87B701A9F1A3E008A7452 /* BombWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -298,6 +384,10 @@
 					3E6678E31A776E700057DB4E = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = 3E6678CE1A776E700057DB4E;
+					};
+					3EF87B6F1A9F1A3E008A7452 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = PAZX553D3X;
 					};
 				};
 			};
@@ -316,6 +406,7 @@
 			targets = (
 				3E6678CE1A776E700057DB4E /* BombGame */,
 				3E6678E31A776E700057DB4E /* BombGameTests */,
+				3EF87B6F1A9F1A3E008A7452 /* BombWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -363,6 +454,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3EF87B6E1A9F1A3E008A7452 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EF87B7A1A9F1A3E008A7452 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -394,6 +493,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3EF87B6C1A9F1A3E008A7452 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EF87B781A9F1A3E008A7452 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -401,6 +508,11 @@
 			isa = PBXTargetDependency;
 			target = 3E6678CE1A776E700057DB4E /* BombGame */;
 			targetProxy = 3E6678E51A776E700057DB4E /* PBXContainerItemProxy */;
+		};
+		3EF87B7C1A9F1A3E008A7452 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EF87B6F1A9F1A3E008A7452 /* BombWidget */;
+			targetProxy = 3EF87B7B1A9F1A3E008A7452 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -511,6 +623,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BombGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -527,6 +640,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BombGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -569,6 +683,34 @@
 			};
 			name = Release;
 		};
+		3EF87B7E1A9F1A3F008A7452 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BombWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3EF87B7F1A9F1A3F008A7452 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = BombWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -595,6 +737,15 @@
 			buildConfigurations = (
 				3E6678F21A776E700057DB4E /* Debug */,
 				3E6678F31A776E700057DB4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EF87B801A9F1A3F008A7452 /* Build configuration list for PBXNativeTarget "BombWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EF87B7E1A9F1A3F008A7452 /* Debug */,
+				3EF87B7F1A9F1A3F008A7452 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

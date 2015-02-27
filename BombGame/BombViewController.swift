@@ -47,9 +47,7 @@ class BombViewController: BaseViewController {
             UIView.animateWithDuration(0.5, animations:{
                 self.endButton!.frame = CGRectMake(10, CGRectGetMinY(self.endButton!.frame), ScreenWIdht - 20, CGRectGetHeight(self.endButton!.frame))
             })
-//            self.endButton?.frame = CGRectMake(10, CGRectGetMinY(self.endButton!.frame), ScreenWIdht - 20, CGRectGetHeight(self.endButton!.frame))
             self.bombImage?.showEndIamge()
-//            self.end
             playBombMusic()
         }
         else{
@@ -57,6 +55,14 @@ class BombViewController: BaseViewController {
         }
     }
     
+    func updateViewAnimtatImage(){
+        if self.isCounting {
+            self.bombImage?.showImage()
+        }
+        else{
+            self.bombImage?.showSuspendImge()
+        }
+    }
     
     override func leftButtonAction() {
         self.navigationController?.popViewControllerAnimated(true)
@@ -130,7 +136,6 @@ class BombViewController: BaseViewController {
         self.isCounting = false
 //        locationManagerObj.cancelLocation(orderSecond)
         locationManagerObj.cancelLocation(orderSecond, startDate: orderLocation)
-        
         self.navigationController?.popViewControllerAnimated(true)
     }
     
@@ -141,12 +146,9 @@ class BombViewController: BaseViewController {
             if let ref: CFURLRef = CFBundleCopyResourceURL(CFBundleGetMainBundle(), ("bomb"), ("aif"), nil) {
                 AudioServicesCreateSystemSoundID(ref, &soundID)
                 AudioServicesPlaySystemSound(soundID)
-                //            func AudioServicesAddSystemSoundCompletion(inSystemSoundID: SystemSoundID, inRunLoop: CFRunLoop!, inRunLoopMode: CFString!, inCompletionRoutine: AudioServicesSystemSoundCompletionProc, inClientData: UnsafeMutablePointer<Void>) -> OSStatus
-                
                 AudioServicesAddSystemSoundCompletion(soundID, CFRunLoopGetMain(), nil, nil, nil)
             }
             else {
-                
             }
         }
     }

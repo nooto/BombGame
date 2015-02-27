@@ -10,10 +10,9 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
-
-
+    var rootControl : ViewController = ViewController()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
@@ -21,13 +20,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.makeKeyAndVisible()
 //        self.window!.rootViewController = ViewController()
         
-        var root=ViewController()
-        var navCtrl=UINavigationController(rootViewController:root)
+        var navCtrl=UINavigationController(rootViewController:self.rootControl)
         self.window!.rootViewController=navCtrl
 
         
         application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound | UIUserNotificationType.Badge | UIUserNotificationType.Alert, categories: nil))
         // Override point for customization after application launch.
+        return true
+    }
+    
+   func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+    var lastVC: (AnyObject?) = (self.rootControl.navigationController?.viewControllers.last)
+    if lastVC is BombViewController{
+        
+    }
+    else{
+        var bombView : BombViewController = BombViewController()
+        bombView.orderSecond = NSTimeInterval(arc4random_uniform(UInt32(240)) + UInt32(60))
+        rootControl.navigationController?.pushViewController(bombView, animated: true)
+    }
         return true
     }
 
@@ -46,6 +57,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
+        
+//        for item in library {
+//            if let movie = item as? Movie {
+//                println("Movie: '\(movie.name)', dir. \(movie.director)")
+//            } else if let song = item as? Song {
+//                println("Song: '\(song.name)', by \(song.artist)")
+//            }
+//        }
+//        
+        var lastVC: (AnyObject?) = (self.rootControl.navigationController?.viewControllers.last)
+        if let vc = lastVC as? BombViewController{
+            vc.updateViewAnimtatImage()
+        }
+        
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
