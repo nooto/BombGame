@@ -38,7 +38,7 @@ class LocationManager: NSObject {
             if notifyObj is UILocalNotification{
                 if notifyObj.fireDate?.isEqualToDate(firedate) == true{
                     //                    var destLoc:UILocalNotification = UILocalNotification(coder: notifyObj)
-                    UIApplication.sharedApplication().cancelLocalNotification(notifyObj as UILocalNotification)
+                    UIApplication.sharedApplication().cancelLocalNotification(notifyObj as! UILocalNotification)
                     return
                 }
             }

@@ -38,7 +38,7 @@ class TitleView: UIView {
     
     func setTitle(title : NSString){
         if title.length > 0 {
-            titleLabel?.text = title
+            titleLabel?.text = title as String
         }
     }
     

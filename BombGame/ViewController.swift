@@ -208,7 +208,7 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
     
     func updataOrderSecondTime(minuter : Int , second : Int){
         orderSecondTime = NSTimeInterval(minuter * 60) + NSTimeInterval(second * 5)
-        var  descrptin : NSString?
+        var  descrptin : NSString!
         if minuter != 0 && second != 0 {
             descrptin = "炸弹将于\(minuter)分\(second * 5)秒后爆炸"
         }
@@ -220,7 +220,7 @@ class ViewController: BaseViewController, UIPickerViewDataSource, UIPickerViewDe
             descrptin = "炸弹将于\(minuter)分后爆炸"
         }
         
-        descriptionLabel.text = descrptin
+        descriptionLabel.text = descrptin as String
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
